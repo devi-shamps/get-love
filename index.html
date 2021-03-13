@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- jQuery -->
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="jquery.buttonLoader.js"></script>
+    <!-- Logo -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/Logo.png" />
+
+    <!-- Fonts and link-css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=B612&display=swap" rel="stylesheet">
+
+    <!-- other -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +20,26 @@
 </head>
 <body>
     <h1>Get Love</h1>
-    <p>hello word</p>
+    <p>You are here to find love &lsaquo;3 </p>
+
+    <!-- Loader -->
+    <div class="loader"></div>
+
+    <!-- jQuery Loader -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+        $(".loader").fadeOut("1000"); })
+    </script>
+    <script type="text/javascript">
+    $('.button-class').click(function () { 
+    var btn = $(this); 
+    $(btn).buttonLoader('start');
+    setTimeout(function () {
+    $(btn).buttonLoader('stop'); 
+    }, 
+    5000); 
+    });
+    </script>
 </body>
 </html>
