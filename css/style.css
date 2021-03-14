@@ -1,133 +1,54 @@
-* {
-    margin: 0;
-    top: 0;
+:root {
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+
 }
 
 body {
-    background-color: #c5ffff;
-    font-family: 'B612', sans-serif;
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
 }
 
-h1 {
-    color: #faaed9;
-    font-size: 50px;
-    text-align: center;
-    margin-top: 50px;
-    padding: 20;
+main {
+    margin-left: 5rem;
+    padding: 1rem;
 }
 
-p {
-    color: #aed5fa;
-    font-size: 50px;
-    text-align: center;
-    margin-top: 20px;
-    padding: 20;
+
+
+
+
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--bg-primary);
 }
 
-/* Button Progress bar */
-:root {
-    --backgroundColor: rgba(246, 241, 209);
-    --colorShadeA: rgb(106, 163, 137);
-    --colorShadeB: rgb(121, 186, 156);
-    --colorShadeC: rgb(150, 232, 195);
-    --colorShadeD: rgb(187, 232, 211);
-    --colorShadeE: rgb(205, 255, 232);
-  }
-  
-  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
-  * {
-    box-sizing: border-box;
-  }
-  *::before, *::after {
-    box-sizing: border-box;
-  }
-  button {
-    position: relative;
-    left: 43%;
-    top: 160px;
-    display: inline-block;
-    cursor: pointer;
-    outline: none;
-    border: 0;
-    vertical-align: middle;
-    text-decoration: none;
-    font-size: 1.5rem;
-      color:var(--colorShadeA);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: inherit;
-  }
-  
-  button.big-button {
-     padding: 1em 2em;
-     border: 2px solid var(--colorShadeA);
-    border-radius: 1em;
-    background: var(--colorShadeE);
-  transform-style: preserve-3d;
-     transition: all 175ms cubic-bezier(0, 0, 1, 1);
-  }
-  button.big-button::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
+.cursor  {
+    background: white;
+    height: 10.5px;
+    width: 10.5px;
+    border-radius: 50%;
+    display: block;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--colorShadeC);
-    border-radius: inherit;
-      box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
-   transform: translate3d(0, 0.75em, -1em);
-       transition: all 175ms cubic-bezier(0, 0, 1, 1);
-  }
-  
-  
-  button.big-button:hover {
-    background: var(--colorShadeD);
-    transform: translate(0, 0.375em);
-  }
-  
-  button.big-button:hover::before {
-    transform: translate3d(0, 0.75em, -1em);
-  }
-  
-  button.big-button:active {
-              transform: translate(0em, 0.75em);
-  }
-  
-  button.big-button:active::before {
-    transform: translate3d(0, 0, -1em);
-    
-        box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
-  
-  }
-/* Progress bar */
-#progressbar
-{
-  position:relative;
-  width:100px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-image:url("../assets/pggray.png");
-  height:20px;
-  -moz-border-radius:2px;
-  border-radius:2px;	
-}
-#indicator
-{
-  position:absolute;
-  left:0;
-  top:0;
-  width:0px;
-  background-image:url("../assets/pggreen.png");
-  height:20px;
-  margin:0 0 0 0;
-}
-
-#progressnum {
-    color: violet;
-    font-size: 30px;
-    text-align: center;
-    padding: 20;
+    transition: all 100ms ease;
+    z-index: 2;
 }
